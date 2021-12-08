@@ -1,6 +1,6 @@
 extends Node2D
 
-
+# このファイルはテスト用に作成
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
