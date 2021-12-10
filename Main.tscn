@@ -65,6 +65,10 @@ __meta__ = {
 [node name="NextSE" type="AudioStreamPlayer2D" parent="."]
 volume_db = 24.0
 
+[node name="PrevSE" type="AudioStreamPlayer2D" parent="."]
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+
 [connection signal="button_down" from="Next" to="." method="_on_Next_button_down"]
 [connection signal="button_down" from="Prev" to="." method="_on_Prev_button_down"]
 [connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
