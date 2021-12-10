@@ -3,6 +3,8 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+onready var utils = load("res://Utils.gd").new()
+
 var text_timer = 0
 var text_row = 0
 var now_scene
@@ -24,6 +26,7 @@ func _process(delta):
 
 
 func _on_Next_button_down():
+	$SE_Next.play()
 	if text_row <  now_scene.text.size() - 1:
 		$NextSE.play()
 		text_row += 1
@@ -44,6 +47,9 @@ func _on_Button_button_down():
 
 func _on_Button2_button_down():
 	load_scene(now_scene.root[1])
+	
+func _on_Button_Save_button_down():
+	utils.save(now_scene)
 	
 func load_scene(next):
 	text_row = 0
