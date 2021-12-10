@@ -9,7 +9,7 @@ var now_scene
 export var TEXT_SPEED = 30
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	now_scene = load("res://A.tscn").instance()
+	now_scene = load("res://街.tscn").instance()
 	add_child(now_scene)
 	$Dialog.text = now_scene.text[0]
 	$Button.text = now_scene.root_text[0]
@@ -25,6 +25,7 @@ func _process(delta):
 
 func _on_Next_button_down():
 	if text_row <  now_scene.text.size() - 1:
+		$NextSE.play()
 		text_row += 1
 		$Dialog.text = now_scene.text[text_row]
 		text_timer = 0
