@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Sounds/SE/StartStory_BGM_main.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/SE/StartStory_SE_next.wav" type="AudioStream" id=4]
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -56,6 +58,13 @@ text = "Save"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+autoplay = true
+
+[node name="SE_Next" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="button_down" from="Next" to="." method="_on_Next_button_down"]
 [connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
