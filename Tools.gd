@@ -1,10 +1,11 @@
 extends Node
 
-var DEFAULT_SAVE_FILE_NAME = "user://save_data.dat"
+var DEFAULT_SAVE_FILE_NAME = "res://save_data.dat"
 
 func save( data, file_name = DEFAULT_SAVE_FILE_NAME ):
+	print( "aaa" )
 	var file = File.new()
-	file.open( file_name, _File.WRITE )
+	file.open( file_name, File.WRITE )
 	file.store_string( data )
 	file.close()
 

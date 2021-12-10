@@ -3,6 +3,8 @@ extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
+onready var tools = load("res://Tools.gd").new()
+
 var text_timer = 0
 var text_row = 0
 var now_scene
@@ -43,6 +45,9 @@ func _on_Button_button_down():
 
 func _on_Button2_button_down():
 	load_scene(now_scene.root[1])
+	
+func _on_Button_Save_button_down():
+	tools.save("aaa")
 	
 func load_scene(next):
 	text_row = 0
