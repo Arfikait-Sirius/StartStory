@@ -18,6 +18,10 @@ config/name="StartStory"
 run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
+[audio]
+
+default_bus_layout=""
+
 [physics]
 
 common/enable_pause_aware_picking=true
