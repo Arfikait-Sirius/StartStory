@@ -56,3 +56,4 @@ volume_db = 24.0
 [connection signal="button_down" from="Next" to="." method="_on_Next_button_down"]
 [connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
 [connection signal="button_down" from="Button2" to="." method="_on_Button2_button_down"]
+[connection signal="button_down" from="Button_Save" to="." method="_on_Button_Save_button_down"]
