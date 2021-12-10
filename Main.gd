@@ -1,14 +1,16 @@
 extends Node2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-onready var utils = load("res://Utils.gd").new()
+
+onready var utils = load("res://Utils/Utils.gd").new()
 
 var text_timer = 0
 var text_row = 0
 var now_scene
 export var TEXT_SPEED = 30
+
+# var bgm_resource_list = ["res://Sounds/BGM/StartStory_BGM_main.wav", "res://Sounds/BGM/StartStory_BGM_trap.wav"]
+# var se_resource_list = ["res://Sounds/SE/StartStory_SE_next.wav", "res://Sounds/SE/StartStory_SE_prev.wav", "res://Sounds/SE/StartStory_SE_log.wav"]
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	now_scene = load("res://A.tscn").instance()
@@ -16,6 +18,10 @@ func _ready():
 	$Dialog.text = now_scene.text[0]
 	$Button.text = now_scene.root_text[0]
 	$Button2.text = now_scene.root_text[1]
+	# utils.sound.init_bgm($BGM, bgm_resource_list[0])
+	# utils.sound.play_bgm()
+	# utils.sound.add_se("next", $SE_Next, se_resource_list[0])
+	# utils.sound.add_se("prev", $SE_Prev, se_resource_list[1])
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -26,7 +32,7 @@ func _process(delta):
 
 
 func _on_Next_button_down():
-	$SE_Next.play()
+	# utils.sound.play_se("next")
 	if text_row <  now_scene.text.size() - 1:
 		text_row += 1
 		$Dialog.text = now_scene.text[text_row]
@@ -40,15 +46,22 @@ func _on_Next_button_down():
 			$Button.show()
 
 
+func _on_Prev_button_down():
+	# utils.sound.play_se("prev")
+	pass
+
+
 func _on_Button_button_down():
 	load_scene(now_scene.root[0])
 
 
 func _on_Button2_button_down():
 	load_scene(now_scene.root[1])
+
 	
 func _on_Button_Save_button_down():
-	utils.save(now_scene)
+	utils.config.save("store")
+
 	
 func load_scene(next):
 	text_row = 0
@@ -62,3 +75,4 @@ func load_scene(next):
 	$Button2.text = now_scene.root_text[1]
 	$Button.hide()
 	$Button2.hide()
+	# utils.sound.change_bgm(bgm_resource_list[1])
