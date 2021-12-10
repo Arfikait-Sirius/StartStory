@@ -8,8 +8,8 @@ var text_row = 0
 var now_scene
 export var TEXT_SPEED = 30
 
-# var bgm_resource_list = ["res://Sounds/BGM/StartStory_BGM_main.wav", "res://Sounds/BGM/StartStory_BGM_trap.wav"]
-# var se_resource_list = ["res://Sounds/SE/StartStory_SE_next.wav", "res://Sounds/SE/StartStory_SE_prev.wav", "res://Sounds/SE/StartStory_SE_log.wav"]
+var bgm_resource_list = ["res://Sounds/BGM/StartStory_BGM_main.wav", "res://Sounds/BGM/StartStory_BGM_trap.wav"]
+var se_resource_list = ["res://Sounds/SE/StartStory_SE_next.wav", "res://Sounds/SE/StartStory_SE_prev.wav", "res://Sounds/SE/StartStory_SE_log.wav"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,10 +18,10 @@ func _ready():
 	$Dialog.text = now_scene.text[0]
 	$Button.text = now_scene.root_text[0]
 	$Button2.text = now_scene.root_text[1]
-	# utils.sound.init_bgm($BGM, bgm_resource_list[0])
-	# utils.sound.play_bgm()
-	# utils.sound.add_se("next", $SE_Next, se_resource_list[0])
-	# utils.sound.add_se("prev", $SE_Prev, se_resource_list[1])
+	utils.sound.init_bgm($BGM, bgm_resource_list[0])
+	utils.sound.play_bgm()
+	utils.sound.add_se("next", $NextSE, se_resource_list[0])
+	utils.sound.add_se("prev", $PrevSE, se_resource_list[1])
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,7 +32,7 @@ func _process(delta):
 
 
 func _on_Next_button_down():
-	# utils.sound.play_se("next")
+	utils.sound.play_se("next")
 	if text_row <  now_scene.text.size() - 1:
 		$NextSE.play()
 		text_row += 1
@@ -48,7 +48,7 @@ func _on_Next_button_down():
 
 
 func _on_Prev_button_down():
-	# utils.sound.play_se("prev")
+	utils.sound.play_se("prev")
 	pass
 
 
@@ -76,4 +76,4 @@ func load_scene(next):
 	$Button2.text = now_scene.root_text[1]
 	$Button.hide()
 	$Button2.hide()
-	# utils.sound.change_bgm(bgm_resource_list[1])
+	utils.sound.change_bgm(bgm_resource_list[1])
