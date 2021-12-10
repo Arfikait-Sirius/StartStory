@@ -7,7 +7,7 @@ var se_map = {}
 
 func init_bgm( node, stream ):
 	bgm = node
-	bgm.stream = load(stream)
+	bgm.stream = load( stream )
 
 
 func play_bgm():
@@ -20,12 +20,12 @@ func stop_bgm():
 
 func change_bgm( stream ):
 	bgm.stop()
-	bgm.stream = load(stream)
+	bgm.stream = load( stream )
 	bgm.play()
 
 
 func add_se( key, node, stream ):
-	node.stream = load(stream)
+	node.stream = load( stream )
 	se_map[key] = node
 
 
