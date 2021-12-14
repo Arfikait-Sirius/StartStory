@@ -8,6 +8,7 @@ var text_row = 0
 var now_scene
 export var TEXT_SPEED = 30
 
+# [ここ変えた]
 var bgm_resource_list = ["res://Sounds/BGM/StartStory_BGM_main.wav", "res://Sounds/BGM/StartStory_BGM_trap.wav"]
 var se_resource_list = ["res://Sounds/SE/StartStory_SE_next.wav", "res://Sounds/SE/StartStory_SE_prev.wav", "res://Sounds/SE/StartStory_SE_log.wav"]
 
