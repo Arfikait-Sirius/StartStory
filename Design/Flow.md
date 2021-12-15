@@ -3,6 +3,6 @@
 ```mermaid
 flowchart TD
 
-  Title( "タイトル" ) --> MainMenu( "メインメニュー" )
-  MainMenu --> SceneMain( "主人公登場シーン" )
+  Title --> MainMenu
+  MainMenu --> SceneMain
 ```
