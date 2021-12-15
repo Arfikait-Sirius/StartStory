@@ -2,7 +2,6 @@
 
 ```mermaid
 flowchart TD
-
-  Title --> MainMenu
-  MainMenu --> SceneMain
+    Title --> MainMenu
+    MainMenu --> SceneMain
 ```
