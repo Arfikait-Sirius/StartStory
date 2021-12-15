@@ -1,8 +1,8 @@
 # Flow
 
 ```mermaid
-graph TD
+graph TB
 
-  Title( "タイトル" )-->MainMenu( "メインメニュー" )
-  MainMenu-->SceneMain( "主人公登場シーン" )
+  Title( "タイトル" ) --> MainMenu( "メインメニュー" )
+  MainMenu --> SceneMain( "主人公登場シーン" )
 ```
