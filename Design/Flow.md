@@ -1,7 +1,7 @@
 # Flow
 
 ```mermaid
-flowchart TD
+graph TD
     Title --> MainMenu
     MainMenu --> SceneMain
 ```
