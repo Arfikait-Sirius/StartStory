@@ -3,12 +3,12 @@
 ```mermaid
 graph TD
     Title --> MainMenu
-    MainMenu --> SceneIntroduceMainCharactor
-    SceneIntroduceMainCharactor --> SceneDeparture
+    MainMenu --> SceneIntroduceMainCharacter
+    SceneIntroduceMainCharacter --> SceneDeparture
     SceneDeparture --> SceneRemainsEntrance
     SceneRemainsEntrance --> SceneRemainsTrap
-    SceneRemainsTrap --> SceneIntroduceSubCharactor
-    SceneIntroduceSubCharactor --> SceneRescue
+    SceneRemainsTrap --> SceneIntroduceSubCharacter
+    SceneIntroduceSubCharacter --> SceneRescue
     SceneRescue --> SceneNotice
     SceneNotice --> SceneEndTrue
     SceneEndTrue --> Ending
