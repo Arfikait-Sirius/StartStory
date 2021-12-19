@@ -1,0 +1,55 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://タイトル.gd" type="Script" id=2]
+
+[node name="タイトル" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="NewGame" type="Button" parent="."]
+margin_left = 825.013
+margin_top = 398.756
+margin_right = 993.013
+margin_bottom = 435.756
+custom_fonts/font = ExtResource( 1 )
+text = "最初から始める"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadGame" type="Button" parent="."]
+margin_left = 825.013
+margin_top = 459.387
+margin_right = 993.013
+margin_bottom = 496.387
+custom_fonts/font = ExtResource( 1 )
+text = "続きから始める"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option" type="Button" parent="."]
+margin_left = 825.013
+margin_top = 512.286
+margin_right = 993.013
+margin_bottom = 549.286
+custom_fonts/font = ExtResource( 1 )
+text = "設定"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="."]
+margin_left = 142.0
+margin_top = 107.0
+margin_right = 260.0
+margin_bottom = 133.0
+rect_scale = Vector2( 5.679, 6.408 )
+custom_fonts/font = ExtResource( 1 )
+text = "StartStroy（仮）"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="NewGame" to="." method="_on_NewGame_button_down"]
+[connection signal="button_down" from="LoadGame" to="." method="_on_LoadGame_button_down"]
+[connection signal="button_down" from="Option" to="." method="_on_Option_button_down"]

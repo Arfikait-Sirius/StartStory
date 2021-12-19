@@ -1,0 +1,110 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://読み込み.gd" type="Script" id=2]
+
+[node name="読み込み" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Data1" type="Button" parent="."]
+margin_left = 263.626
+margin_top = 31.441
+margin_right = 415.626
+margin_bottom = 95.441
+rect_scale = Vector2( 3.552, 2.434 )
+custom_fonts/font = ExtResource( 1 )
+text = "セーブデータ1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Data2" type="Button" parent="."]
+margin_left = 263.626
+margin_top = 220.479
+margin_right = 415.626
+margin_bottom = 284.479
+rect_scale = Vector2( 3.552, 2.434 )
+custom_fonts/font = ExtResource( 1 )
+text = "セーブデータ2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Data3" type="Button" parent="."]
+margin_left = 260.502
+margin_top = 404.829
+margin_right = 412.502
+margin_bottom = 468.829
+rect_scale = Vector2( 3.552, 2.434 )
+custom_fonts/font = ExtResource( 1 )
+text = "セーブデータ3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+margin_left = 423.0
+margin_top = 242.0
+margin_right = 664.0
+margin_bottom = 362.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Yes" type="Button" parent="Panel"]
+margin_left = 16.423
+margin_top = 51.556
+margin_right = 89.423
+margin_bottom = 87.556
+custom_fonts/font = ExtResource( 1 )
+text = "はい"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="No" type="Button" parent="Panel"]
+margin_left = 134.631
+margin_top = 51.556
+margin_right = 207.631
+margin_bottom = 87.556
+custom_fonts/font = ExtResource( 1 )
+text = "いいえ"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 9.0
+margin_top = 28.0
+margin_right = 233.0
+margin_bottom = 53.0
+custom_fonts/font = ExtResource( 1 )
+text = "このデータを読み込みますか？"
+
+[node name="Label2" type="Label" parent="Panel"]
+margin_left = 9.0
+margin_top = 4.874
+margin_right = 233.0
+margin_bottom = 29.874
+custom_fonts/font = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Prev" type="Button" parent="."]
+margin_left = 845.102
+margin_top = 525.841
+margin_right = 1003.1
+margin_bottom = 564.841
+custom_fonts/font = ExtResource( 1 )
+text = "戻る"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="Data1" to="." method="_on_Data1_button_down"]
+[connection signal="button_down" from="Data2" to="." method="_on_Data2_button_down"]
+[connection signal="button_down" from="Data3" to="." method="_on_Data3_button_down"]
+[connection signal="button_down" from="Panel/Yes" to="." method="_on_Yes_button_down"]
+[connection signal="button_down" from="Panel/No" to="." method="_on_No_button_down"]
+[connection signal="button_down" from="Prev" to="." method="_on_Prev_button_down"]
