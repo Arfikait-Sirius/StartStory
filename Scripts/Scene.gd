@@ -1,6 +1,6 @@
 extends Node2D
 
-var scene = preload("res://SceneManager.tscn").instance()
+var scene = preload("res://Scenes/SceneManager.tscn").instance()
 var text
 var route
 var route_text

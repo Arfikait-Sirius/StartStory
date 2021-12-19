@@ -54,5 +54,5 @@ func Data_enabled():
 
 func _on_Prev_button_down():
 	get_node(".").queue_free()
-	get_tree().get_root().add_child(load("res://タイトル.tscn").instance())
+	get_tree().get_root().add_child(load("res://Scenes/タイトル.tscn").instance())
 
