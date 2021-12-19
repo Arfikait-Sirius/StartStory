@@ -9,4 +9,4 @@ func _process(delta):
 	time += delta
 	if time > 3:
 		get_node(".").queue_free()
-		get_tree().get_root().add_child(preload("res://タイトル.tscn").instance())
+		get_tree().get_root().add_child(preload("res://Scenes/タイトル.tscn").instance())

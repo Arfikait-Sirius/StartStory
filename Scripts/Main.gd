@@ -12,7 +12,7 @@ export var TEXT_SPEED = 30
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	VisualServer.set_default_clear_color(Color(0.3,0.3,0.3,1.0))
-	now_scene = load("res://街.tscn").instance()
+	now_scene = load("res://Scenes/街.tscn").instance()
 	add_child(now_scene)
 	$Dialog.text = now_scene.text[0]
 	$Button.text = now_scene.route_text[0]
@@ -29,7 +29,6 @@ func _process(delta):
 func _on_Next_button_down():
 	$SE_Next.play()
 	if text_row <  now_scene.text.size() - 1:
-		$NextSE.play()
 		text_row += 1
 		$Dialog.text = now_scene.text[text_row]
 		text_timer = 0
@@ -40,7 +39,7 @@ func _on_Next_button_down():
 			$Button2.show()
 		else:
 			get_node(".").queue_free()
-			var next_scene = "res://スタッフロール.tscn"
+			var next_scene = "res://Scenes/スタッフロール.tscn"
 			now_scene = load(next_scene).instance()
 			get_tree().get_root().add_child(now_scene)
 
@@ -59,7 +58,7 @@ func load_scene(next):
 	text_row = 0
 	text_timer = 0
 	now_scene.queue_free()
-	var next_scene = "res://" + next + ".tscn"
+	var next_scene = "res://Scenes/" + next + ".tscn"
 	now_scene = load(next_scene).instance()
 	add_child(now_scene)
 	$Dialog.text = now_scene.text[text_row]
