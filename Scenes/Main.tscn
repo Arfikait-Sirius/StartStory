@@ -9,6 +9,7 @@ bg_color = Color( 0, 0, 0, 1 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
+TEXT_SPEED = null
 
 [node name="Next" type="Button" parent="."]
 margin_left = 878.568
