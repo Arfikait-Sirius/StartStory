@@ -50,6 +50,9 @@ text = "StartStroy（仮）"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Theme" type="AudioStreamPlayer" parent="."]
+
 [connection signal="button_down" from="NewGame" to="." method="_on_NewGame_button_down"]
 [connection signal="button_down" from="LoadGame" to="." method="_on_LoadGame_button_down"]
 [connection signal="button_down" from="Option" to="." method="_on_Option_button_down"]
