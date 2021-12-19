@@ -1,15 +1,21 @@
 extends Node2D
 
-
 onready var utils = load("res://Utils/Utils.gd").new()
+
+var bgm_resource_list = [
+	"res://Sounds/BGM/StartStory_BGM_city_loop.wav",
+	"res://Sounds/BGM/StartStory_BGM_remains_loop.wav"
+]
+var se_resource_list = [
+	"res://Sounds/SE/StartStory_SE_next.wav",
+	"res://Sounds/SE/StartStory_SE_prev.wav",
+	"res://Sounds/SE/StartStory_SE_log.wav"
+]
 
 var text_timer = 0
 var text_row = 0
 var now_scene
 export var TEXT_SPEED = 30
-
-var bgm_resource_list = ["res://Sounds/BGM/StartStory_BGM_main.wav", "res://Sounds/BGM/StartStory_BGM_trap.wav"]
-var se_resource_list = ["res://Sounds/SE/StartStory_SE_next.wav", "res://Sounds/SE/StartStory_SE_prev.wav", "res://Sounds/SE/StartStory_SE_log.wav"]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,8 +27,7 @@ func _ready():
 	$Button2.text = now_scene.route_text[1]
 	utils.sound.init_bgm($BGM, bgm_resource_list[0])
 	utils.sound.play_bgm()
-	utils.sound.add_se("next", $NextSE, se_resource_list[0])
-	utils.sound.add_se("prev", $PrevSE, se_resource_list[1])
+	utils.sound.add_se("next", $SE_Next, se_resource_list[0])
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

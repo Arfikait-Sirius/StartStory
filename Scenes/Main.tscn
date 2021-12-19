@@ -2,14 +2,13 @@
 
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://dynamicfont.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Sound/StartStory_SE_next.wav" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/SE/StartStory_SE_next.wav" type="AudioStream" id=3]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
-TEXT_SPEED = null
 
 [node name="Next" type="Button" parent="."]
 margin_left = 878.568
@@ -27,8 +26,8 @@ margin_left = 21.3892
 margin_top = 420.146
 margin_right = 998.389
 margin_bottom = 588.146
-custom_styles/normal = SubResource( 1 )
 custom_fonts/normal_font = ExtResource( 2 )
+custom_styles/normal = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -58,6 +57,9 @@ __meta__ = {
 [node name="SE_Next" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 3 )
 volume_db = 24.0
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+
 [connection signal="button_down" from="Next" to="." method="_on_Next_button_down"]
 [connection signal="button_down" from="Button" to="." method="_on_Button_button_down"]
 [connection signal="button_down" from="Button2" to="." method="_on_Button2_button_down"]
