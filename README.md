@@ -2,6 +2,12 @@
 Novel game.
 
 ## Git Commands
+
+#### Basic routine
+```
+add -> commit -> push
+```
+
 ### Clone repository
 ```
 $ git clone https://github.com/Arfikait-Sirius/StartStory.git
