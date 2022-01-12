@@ -70,7 +70,7 @@ func _on_Button2_button_down():
 func _on_Button_Save_button_down():
 	utils.config.save("store")
 
-	
+#load
 func load_scene(next):
 	text_row = 0
 	text_timer = 0
