@@ -22,6 +22,26 @@ $ git switch [branch name]
 $ git pull origin [remote branch name]
 ```
 
+### Staging file
+```
+$ git add [file name]
+```
+
+### Staging all files
+```
+$ git add -A
+```
+
+### Commit
+```
+$ git commit -m "[commit message]"
+```
+
+### Update remote branch
+```
+$ git push origin [target branch name]
+```
+
 ### Create branch
 ```
 $ git switch -c [new branch name]
