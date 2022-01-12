@@ -3,13 +3,13 @@ extends Node2D
 onready var utils = load("res://Utils/Utils.gd").new()
 
 var bgm_resource_list = [
-	"res://Sounds/BGM/StartStory_BGM_city_loop.wav",
-	"res://Sounds/BGM/StartStory_BGM_remains_loop.wav"
+	"res://Sounds/BGM/Loop/City.wav",
+	"res://Sounds/BGM/Loop/Remains.wav"
 ]
 var se_resource_list = [
-	"res://Sounds/SE/StartStory_SE_next.wav",
-	"res://Sounds/SE/StartStory_SE_prev.wav",
-	"res://Sounds/SE/StartStory_SE_log.wav"
+	"res://Sounds/SE/Next.wav",
+	"res://Sounds/SE/Prev.wav",
+	"res://Sounds/SE/Log.wav"
 ]
 
 var text_timer = 0

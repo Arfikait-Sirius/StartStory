@@ -8,7 +8,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	VisualServer.set_default_clear_color(Color(0.0,0.0,0.0,1.0))
-	$Theme.stream = load("res://Sounds/BGM/StartStory_BGM_Start.wav")
+	$Theme.stream = load("res://Sounds/BGM/Theme/Start.wav")
 	$Theme.play()
 
 
