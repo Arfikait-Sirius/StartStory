@@ -15,12 +15,8 @@ _global_script_class_icons={
 [application]
 
 config/name="StartStory"
-run/main_scene="res://Main.tscn"
+run/main_scene="res://Scenes/タイトル.tscn"
 config/icon="res://icon.png"
-
-[audio]
-
-default_bus_layout=""
 
 [physics]
 
