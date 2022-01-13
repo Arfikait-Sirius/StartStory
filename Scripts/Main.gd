@@ -1,6 +1,7 @@
 extends Node2D
 
 onready var utils = load("res://Utils/Utils.gd").new()
+var sceneReader = load("res://Scripts/StoryReader.gd").new()
 
 var bgm_resource_list = [
 	"res://Sounds/BGM/Loop/City.wav",
@@ -21,6 +22,10 @@ export var TEXT_SPEED = 30
 func _ready():
 	VisualServer.set_default_clear_color(Color(0.3,0.3,0.3,1.0))
 	now_scene = load("res://Scenes/街.tscn").instance()
+	print("メインから呼ぶ")
+	sceneReader.initRead()
+	print("読み込み結果")
+	print(sceneReader.my_dictionary.mati.getText1())
 	add_child(now_scene)
 	$Dialog.text = now_scene.text[0]
 	$Button.text = now_scene.route_text[0]
