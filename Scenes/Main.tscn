@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Main.gd" type="Script" id=1]
-[ext_resource path="res://dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://mplus-1p-medium.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Sounds/SE/Next.wav" type="AudioStream" id=3]
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0, 0, 0, 1 )
@@ -15,7 +18,7 @@ margin_left = 878.568
 margin_top = 345.477
 margin_right = 1005.57
 margin_bottom = 408.477
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = SubResource( 2 )
 text = "次へ"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -26,7 +29,7 @@ margin_left = 21.3892
 margin_top = 420.146
 margin_right = 998.389
 margin_bottom = 588.146
-custom_fonts/normal_font = ExtResource( 2 )
+custom_fonts/normal_font = SubResource( 2 )
 custom_styles/normal = SubResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -38,7 +41,7 @@ margin_left = 192.056
 margin_top = 117.944
 margin_right = 797.056
 margin_bottom = 169.944
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -49,7 +52,7 @@ margin_left = 192.056
 margin_top = 240.101
 margin_right = 797.056
 margin_bottom = 292.101
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
